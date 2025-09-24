@@ -9,3 +9,4 @@ print(data)
 print("-"*10)
 cleaned=data.fillna(data.mean())
 print(cleaned)
+

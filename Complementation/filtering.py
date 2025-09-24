@@ -1,12 +1,13 @@
 from numpy import nan as NA
 import pandas as pd
-
 data = pd.DataFrame([[1., 6.5, 3.],
                      [1., NA, NA],
                      [NA, NA, NA],
-                     [NA, 6.5, 5.]])
+                     [NA, 6.5, 3.]])
 print(data)
 print("-"*10)
-#Fill những cái bị NA bằng các chỉ số trung bình của cột
-cleaned=data.fillna(data.mean())
+cleaned = data.dropna()
 print(cleaned)
+print("-"*10)
+cleaned2=data.dropna(how='all')
+print(cleaned2)
